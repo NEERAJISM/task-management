@@ -1,0 +1,15 @@
+{
+  "name": "task-server",
+  "version": "1.0.0",
+  "description": "Backend server to store & manage tasks from task management client app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Neeraj Patidar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  }
+}
