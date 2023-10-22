@@ -44,7 +44,7 @@ const LoginCard = () => {
   return (
     <Card style={{ width: "300px", margin: "0 auto", marginTop: "100px" }}>
       <Card.Body>
-        <Card.Title style={{ textAlign: "center" }}>Login / Signup</Card.Title>
+        <Card.Title style={{ textAlign: "center" }}>Login</Card.Title>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form>
           <Form.Group className="mt-4" controlId="formUsername">
