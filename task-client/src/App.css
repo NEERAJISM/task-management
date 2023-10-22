@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+::-webkit-scrollbar {
+  width: 3px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0baba; /* Color of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the scrollbar track */
+}
+
+.tab-button[data-tab-key="todo"] {
+  background-color: #ff9999; /* Red color for Todo status */
+}
+
+.tab-button[data-tab-key="inprogress"] {
+  background-color: #ffcc99; /* Orange color for In Progress status */
+}
+
+.tab-button[data-tab-key="done"] {
+  background-color: #99ff99; /* Green color for Done status */
+}
