@@ -8,7 +8,6 @@
 3. Go inside both "**task-client**" & "**task-server**" modules and run "**npm install**"
 4. Run backend server - go inside "**task-server**" dir & run "**node app.js**"
 5. Run UI site - go inside "**task-client**" dir & run "**npm start**"
-6. Run Unit tests - go inside "**task-server**" dir & run "**npm test**"
 
 # Login Credentials
 
@@ -22,3 +21,7 @@
 # Backend Features
 
 - JWT Tokent Auth
+
+# Unit Tests
+
+To Run Unit tests - go inside "**task-server**" dir & run "**npm test**"
