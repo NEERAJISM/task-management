@@ -32,17 +32,8 @@ const LoginCard = () => {
         }
       } catch (error) {
         console.error("Error:", error);
-        setError("Unalbe to Login");
+        setError("Error - Unable to Login");
       }
-    }
-  };
-
-  const handleSignup = () => {
-    if (username.length < 8 || password.length < 8) {
-      setError("Username and password must be at least 8 characters long.");
-    } else {
-      console.log("Signup clicked!");
-      setError("");
     }
   };
 
@@ -83,15 +74,10 @@ const LoginCard = () => {
               <Button
                 variant="primary"
                 className="mr-2"
-                style={{ float: "right" }}
+                style={{ display: "block", margin: "auto" }}
                 onClick={handleLogin}
               >
                 Login
-              </Button>
-            </div>
-            <div className="col">
-              <Button variant="success" onClick={handleSignup}>
-                Signup
               </Button>
             </div>
           </div>

@@ -46,15 +46,13 @@ const Home = () => {
         },
       })
       .then((response) => {
-        if (response.data.length !== 0) {
-          setTasks(response.data);
-          reArrangeTasks(
-            response.data,
-            searchTerm,
-            filterCriteria,
-            sortingCriteria
-          );
-        }
+        setTasks(response.data);
+        reArrangeTasks(
+          response.data,
+          searchTerm,
+          filterCriteria,
+          sortingCriteria
+        );
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
