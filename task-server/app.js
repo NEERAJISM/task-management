@@ -19,7 +19,7 @@ const users = [
   // Add more users if needed
 ];
 
-app.listen(3001, () => {
+var server = app.listen(3001, () => {
   console.log("Server Listening on PORT:", 3001);
 });
 
@@ -28,7 +28,7 @@ app.get("/api/status", (request, response) => {
     Status: "Running",
   };
 
-  response.send(status);
+  response.status(200).send(status);
 });
 
 app.post("/api/login", (req, res) => {
@@ -127,3 +127,5 @@ const db = new sqlite3.Database("./task_database.db", (err) => {
     );
   }
 });
+
+module.exports = server;
