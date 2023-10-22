@@ -60,7 +60,7 @@ const Home = () => {
   }
 
   async function signout() {
-    const token = await localStorage.removeItem("token");
+    localStorage.removeItem("token");
     navigate("/");
   }
 
@@ -121,15 +121,16 @@ const Home = () => {
     // search + type filter
     var d = reArrangeTasks.filter((task) => {
       if (
-        searchTerm.trim() != "" &&
+        searchTerm.trim() !== "" &&
         task.title.toUpperCase().indexOf(searchTerm.trim().toUpperCase()) === -1
       ) {
-        return;
+        return false;
       }
 
       if (filterCriteria === "All" || task.status === filterCriteria) {
-        return task;
+        return true;
       }
+      return false;
     });
 
     // sort
