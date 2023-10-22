@@ -18,16 +18,21 @@ const LoginCard = () => {
       console.log("Login clicked!");
       setError("");
 
-      const response = await axios.post("http://localhost:3001/api/login", {
-        username,
-        password,
-      });
+      try {
+        const response = await axios.post("http://localhost:3001/api/login", {
+          username,
+          password,
+        });
 
-      if (response.status === 200) {
-        const { token } = response.data;
-        console.log("Token:", token);
-        localStorage.setItem("token", token);
-        navigate("/Home");
+        if (response.status === 200) {
+          const { token } = response.data;
+          console.log("Token:", token);
+          localStorage.setItem("token", token);
+          navigate("/Home");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        setError("Unalbe to Login");
       }
     }
   };
